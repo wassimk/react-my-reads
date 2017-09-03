@@ -57,7 +57,6 @@ class BooksApp extends React.Component {
               <div className="list-books-content" />
               <div className="open-search">
                 <SearchButton />
-                <ol className="books-grid" />
               </div>
             </div>
           )}
@@ -79,6 +78,7 @@ class BooksApp extends React.Component {
               </div>
               <div className="search-books-results">
                 <ol className="books-grid" />
+                {/* Search Results Here */}
               </div>
             </div>
           )}
