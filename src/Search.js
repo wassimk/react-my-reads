@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import * as BooksAPI from "./BooksAPI";
 import { Link } from "react-router-dom";
 import Book from "./Book";
-import "./App.css";
 
 class Search extends React.Component {
   static propTypes = {

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Book from "./Book";
-import "./App.css";
 
 class Shelf extends React.Component {
   static propTypes = {
