@@ -16,9 +16,17 @@ class BooksApp extends React.Component {
     });
   }
 
+  updateBook(book, shelf) {
+    BooksAPI.update(book, shelf).then(response => {
+      BooksAPI.getAll().then(books => {
+        this.setState({ books });
+      });
+    });
+  }
+
   render() {
     const { books } = this.state;
-    const shelves = [
+    const SHELVES = [
       {
         title: "Currently Reading",
         name: "currentlyReading"
@@ -45,10 +53,13 @@ class BooksApp extends React.Component {
               </div>
               <div className="list-books-content">
                 <div>
-                  {shelves.map(shelf => (
+                  {SHELVES.map(shelf => (
                     <Shelf
                       books={books.filter(book => book.shelf === shelf.name)}
                       shelf={shelf}
+                      onUpdateBook={(book, shelf) => {
+                        this.updateBook(book, shelf);
+                      }}
                       key={shelf.name}
                     />
                   ))}

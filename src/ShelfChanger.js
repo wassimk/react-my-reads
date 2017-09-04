@@ -9,7 +9,8 @@ class ShelfChanger extends React.Component {
 
   handleSelect = e => {
     e.preventDefault();
-    // Actually move the book
+
+    this.props.onUpdateBook(this.props.book, e.target.value);
   };
 
   render() {

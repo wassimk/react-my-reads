@@ -5,11 +5,12 @@ import "./App.css";
 
 class Book extends React.Component {
   static propTypes = {
-    book: PropTypes.object.isRequired
+    book: PropTypes.object.isRequired,
+    onUpdateBook: PropTypes.func.isRequired
   };
 
   render() {
-    const { book } = this.props;
+    const { book, onUpdateBook } = this.props;
 
     return (
       <li>
@@ -24,7 +25,7 @@ class Book extends React.Component {
               }}
             />
 
-            <ShelfChanger book={book} />
+            <ShelfChanger book={book} onUpdateBook={onUpdateBook} />
           </div>
           <div className="book-title">{book.title}</div>
           <div className="book-authors">{book.authors}</div>
