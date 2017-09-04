@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ShelfChanger from "./ShelfChanger";
 import "./App.css";
 
 class Book extends React.Component {
@@ -22,6 +23,8 @@ class Book extends React.Component {
                 backgroundImage: `url(${book.imageLinks.thumbnail})`
               }}
             />
+
+            <ShelfChanger book={book} />
           </div>
           <div className="book-title">{book.title}</div>
           <div className="book-authors">{book.authors}</div>
