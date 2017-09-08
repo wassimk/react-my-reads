@@ -6,6 +6,7 @@ import Book from "./Book";
 
 class Search extends React.Component {
   static propTypes = {
+    books: PropTypes.array.isRequired,
     onUpdateBook: PropTypes.func.isRequired
   };
 
@@ -16,7 +17,19 @@ class Search extends React.Component {
 
   searchBooks(query) {
     BooksAPI.search(query, 20).then(searchResults => {
-      if (!searchResults.error) this.setState({ searchResults });
+      if (!searchResults.error) {
+        searchResults.forEach(book => {
+          for (let onShelfBook of this.props.books) {
+            if (book.id === onShelfBook.id) {
+              book.shelf = onShelfBook.shelf;
+            } else {
+              book.shelf = "none";
+            }
+          }
+
+          this.setState({ searchResults });
+        });
+      }
     });
   }
 
