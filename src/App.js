@@ -1,10 +1,10 @@
-import React from "react";
-import { Route } from "react-router-dom";
-import * as BooksAPI from "./BooksAPI";
-import Shelf from "./Shelf";
-import Search from "./Search";
-import SearchButton from "./SearchButton";
-import "./App.css";
+import React from 'react';
+import { Route } from 'react-router-dom';
+import * as BooksAPI from './BooksAPI';
+import Shelf from './Shelf';
+import Search from './Search';
+import SearchButton from './SearchButton';
+import './App.css';
 
 class BooksApp extends React.Component {
   state = {
@@ -35,16 +35,16 @@ class BooksApp extends React.Component {
     const { books } = this.state;
     const SHELVES = [
       {
-        title: "Currently Reading",
-        name: "currentlyReading"
+        title: 'Currently Reading',
+        name: 'currentlyReading'
       },
       {
-        title: "Read",
-        name: "read"
+        title: 'Read',
+        name: 'read'
       },
       {
-        title: "Want To Read",
-        name: "wantToRead"
+        title: 'Want To Read',
+        name: 'wantToRead'
       }
     ];
 

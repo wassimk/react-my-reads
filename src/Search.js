@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import * as BooksAPI from "./BooksAPI";
-import { Link } from "react-router-dom";
-import Book from "./Book";
+import React from 'react';
+import PropTypes from 'prop-types';
+import * as BooksAPI from './BooksAPI';
+import { Link } from 'react-router-dom';
+import Book from './Book';
 
 class Search extends React.Component {
   static propTypes = {
@@ -12,7 +12,7 @@ class Search extends React.Component {
 
   state = {
     searchResults: [],
-    query: ""
+    query: ''
   };
 
   searchBooks(query) {
@@ -23,7 +23,7 @@ class Search extends React.Component {
             if (book.id === onShelfBook.id) {
               book.shelf = onShelfBook.shelf;
             } else {
-              book.shelf = "none";
+              book.shelf = 'none';
             }
           }
 
@@ -36,7 +36,7 @@ class Search extends React.Component {
   updateQuery = query => {
     this.setState({ query });
     if (query.length !== 0) this.searchBooks(query);
-    else this.setState({ query: "", searchResults: [] });
+    else this.setState({ query: '', searchResults: [] });
   };
 
   render() {
