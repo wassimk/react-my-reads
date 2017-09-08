@@ -18,11 +18,17 @@ class BooksApp extends React.Component {
   }
 
   updateBook(book, shelf) {
-    BooksAPI.update(book, shelf).then(response => {
-      BooksAPI.getAll().then(books => {
-        this.setState({ books });
+    if (book.shelf !== shelf) {
+      BooksAPI.update(book, shelf).then(() => {
+        book.shelf = shelf;
+
+        // Filter out the book and append it to the end of the list
+        // so it appears at the end of whatever shelf it was added to.
+        this.setState(state => ({
+          books: state.books.filter(b => b.id !== book.id).concat([book])
+        }));
       });
-    });
+    }
   }
 
   render() {
