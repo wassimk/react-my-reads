@@ -3,7 +3,7 @@
     "prettier": "^1.6.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react-dom": "^15.6.2",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
@@ -18,8 +18,7 @@
   },
   "name": "my-reads",
   "version": "0.1.0",
-  "description":
-    "React app to manage a list of books you want to read, have read or are currently reading",
+  "description": "React app to manage a list of books you want to read, have read or are currently reading",
   "main": "index.js",
   "repository": "git@github.com:wassimk/react-my-reads.git",
   "author": "Wassim Metallaoui <wassim@metallaoui.com>",
