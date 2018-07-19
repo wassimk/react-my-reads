@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "prettier": "^1.6.1",
+    "prettier": "^1.13.7",
     "prop-types": "^15.5.8",
     "react": "^15.6.2",
     "react-dom": "^15.5.4",
