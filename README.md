@@ -2,7 +2,7 @@
 
 MyReads is a React project from the [Udacity React Nanodegree](https://www.udacity.com/course/react-nanodegree--nd019). It teaches React fundamentals.
 
-You can see a version of it online at [my-reads.wassim.io](http://my-reads.wassim.io).
+You can see a version of it online at [my-reads.apps.wassim.io](https://my-reads.apps.wassim.io).
 
 It's all local, so just clone the repo and:
 
