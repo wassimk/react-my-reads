@@ -31,7 +31,16 @@ class Book extends React.Component {
             <ShelfChanger book={book} onUpdateBook={onUpdateBook} />
           </div>
           <div className="book-title">{book.title}</div>
-          <div className="book-authors">{book.authors}</div>
+          <div className="book-authors">
+            {book.authors.map((author, index) => {
+              return (
+                <span key={index}>
+                  {author}
+                  <br />
+                </span>
+              );
+            })}
+          </div>
         </div>
       </li>
     );
