@@ -29,6 +29,8 @@ class Search extends React.Component {
 
           this.setState({ searchResults });
         });
+      } else {
+        this.setState({ searchResults: [] });
       }
     });
   }
