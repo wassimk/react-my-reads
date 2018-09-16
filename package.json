@@ -24,7 +24,7 @@
     "airbnb-browser-shims": "^3.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-airbnb": "^2.5.3",
-    "eslint": "^5.4.0",
+    "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.14.0",
