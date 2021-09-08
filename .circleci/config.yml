@@ -35,11 +35,3 @@ jobs:
 
       # run tests!
       # - run: yarn test
-
-      # Deployment to Dokku
-      - run:
-          name: Deploy to Dokku
-          command: |
-            ssh-keyscan -H apps.wassim.io >> ~/.ssh/known_hosts
-            git remote add production dokku@apps.wassim.io:my-reads
-            git push production master --force
